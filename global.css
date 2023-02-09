@@ -70,3 +70,27 @@ select {
 }
 
 ::selection { background: #4e6324; color: #fff; }
+
+@media only screen and (max-width: 960px) {
+
+    .full {
+        width: auto;
+    }
+
+    .responsive {
+        display: none;
+    }
+
+    .footer {
+        justify-content: center;
+        width: auto;
+    }
+
+    .dropDown {
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+}
+
+
