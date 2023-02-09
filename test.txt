@@ -1,0 +1,17 @@
+Audi, BMW, Mercedes
+Audi_A1,
+Audi_A3,
+Audi_A4, 
+Audi_A5, 
+Audi_A6, 
+Audi_A7,
+Audi_A8, 
+Audi_Q3,
+Audi_Q5, 
+Audi_Q7, 
+Audi_R8, 
+Audi_RS,
+Audi_TT,
+
+  var audiModelArray = ["]
+  var bmwModelArray = ["1er-Reihe", "2er Reihe", "3er-Reihe", "4er Reihe", "5er-Reihe", "6er-Reihe", "7er-Reihe", "8er-Reihe"]

@@ -1,0 +1,4 @@
+hersteller1,                                                                hersteller2,                                                                hersteller3
+model1VonH1 * typ1vonModel1VonH1 * typ2vonModel1VonH1 * typ3vonModel1VonH1, model1VonH2 * typ1vonModel1VonH2 * typ2vonModel1VonH2 * typ3vonModel1VonH2, model1VonH3 * typ1vonModel1VonH3 * typ2vonModel1VonH3 * typ3vonModel1VonH3 
+model2VonH1 * typ1vonModel2VonH1 * typ2vonModel2VonH1 * typ3vonModel2VonH1, model2VonH2 * typ1vonModel2VonH2 * typ2vonModel2VonH2 * typ3vonModel2VonH2, model2VonH3 * typ1vonModel2VonH3 * typ2vonModel2VonH3 * typ3vonModel2VonH3
+model3VonH1 * typ1vonModel3VonH1 * typ2vonModel3VonH1 * typ3vonModel3VonH1, model3VonH2 * typ1vonModel3VonH2 * typ2vonModel3VonH2 * typ3vonModel3VonH2, model3VonH3 * typ1vonModel3VonH3 * typ2vonModel3VonH3 * typ3vonModel3VonH3
