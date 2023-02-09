@@ -12,7 +12,7 @@ function LoadData() {
         alert("Fehler beim laden der Datei!");
     }
     //erste Zeile sind die hersteller
-    
+
     //List<String>
     var hersteller = lines[0].split(",");
 
@@ -21,7 +21,6 @@ function LoadData() {
 
     //Map<String, String>
     var types = {};//string bestehend aus nummern welche z.B. "01" für Hersteller index 0 und model index 1 
-    console.log(hersteller);
 
     //um typ 3 von model 2 von hersteller 1 zu bekommen:
 
@@ -33,38 +32,59 @@ function LoadData() {
                 var modelsWithTypData = lines[j].split(",")[i];
                 if (modelsWithTypData == "") continue;
                 //get type Data
-                var modelNameWithDataList = modelsWithTypData.split("*"); 
+                var modelNameWithDataList = modelsWithTypData.split("*");
                 var modelName = modelNameWithDataList.splice(0, 1);
-                models[i].push(modelName);
+                models[i].push(modelName[0]);
                 // console.log(modelName);
-                types[i.toString()+(j-1).toString()] = modelNameWithDataList;
+                types[i.toString() + (j - 1).toString()] = modelNameWithDataList;
             } catch (err) {
                 console.log(err);
             }
         }
     }
-    
-    console.log(models);
-    console.log(types);
 
-    console.log(types["01"][0]);//typ1vonModel2VonH1
+    /** ÄNDERUNG
+     * Hier habe ich ein Objekt erstellt, das hersteller, models, types speichert damit man diese Daten returnen kann.
+     * Zudem sind 2 Funktionen enthalten, diese werden für die unteren zeilen benötigt (eventListener)
+    */
 
+    const returnObject = {
+        hersteller: hersteller,
+        models: models,
+        types: types,
+        getModelsByHersteller: function (herstellerName) {
+            const herstellerIndex = hersteller.indexOf(herstellerName);
+            const herstellerModels = models[herstellerIndex];
+            return herstellerModels;
+        },
+        getTypeByHerstellerAndModel: function (herstellerName, modelName) {
+            const herstellerIndex = hersteller.indexOf(herstellerName);
+            const modelIndex = models[herstellerIndex].indexOf(modelName);
+            const type = types[herstellerIndex.toString() + modelIndex.toString()];
+            return type;
+        }
+    }
+
+    return returnObject;
 }
-function CreateSelectionMenus() {
-    herstellerDropDown = CreateSelectionMenu("herstellerDiv", "hersteller");
-    modelDropDown = CreateSelectionMenu("modelDiv", "model");
-    typDropDown = CreateSelectionMenu("typDiv", "typ");
-}
-function CreateSelectionMenu(divName, loadDataName) {
+
+
+
+function CreateSelectionMenu(divName, array) {
     var whereToPut = document.getElementById(divName);
     var newDropdown = document.createElement('select');
     newDropdown.setAttribute('id', divName + DROPDOWN_MENU_ID);
     whereToPut.appendChild(newDropdown);
-    AddOptionToSelect(newDropdown, "Test");
-    AddOptionToSelect(newDropdown, "Test1");
-    AddOptionToSelect(newDropdown, "Test2");
+
+    //ÄNDERUNG: angepasst für Arrays
+    array.forEach(value => {
+        AddOptionToSelect(newDropdown, value.toString());
+    });
+
     return newDropdown;
 }
+
+
 function readStringFromFilePath(pathOfFileToReadFrom) {
     var request = new XMLHttpRequest();
     request.open("GET", pathOfFileToReadFrom, false);
@@ -75,16 +95,59 @@ function readStringFromFilePath(pathOfFileToReadFrom) {
 }
 
 
-
 function AddOptionToSelect(newDropdown, text) {
     var optionApple = document.createElement("option");
     optionApple.text = text;
     newDropdown.add(optionApple, newDropdown.options[null]);
 }
+
+
+//ÄNDERUNG: angepasst, hat zuvor nicht funktioniert
 function RemoveAllOptions(dropdownMenu) {
-    var optionApple = document.createElement("option");
-    optionApple.text = text;
-    dropdownMenu.add(optionApple, dropdownMenu.options[null]);
+    var i, L = dropdownMenu.options.length - 1;
+    for (i = L; i >= 0; i--) {
+        dropdownMenu.remove(i);
+    }
 }
-LoadData();
-CreateSelectionMenus();
+
+//Main Part
+
+const data = LoadData();
+
+//this is final never chancing
+herstellerDropDown = CreateSelectionMenu("herstellerDiv", data.hersteller);
+modelDropDown = CreateSelectionMenu("modelDiv", data.models[0]);
+typDropDown = CreateSelectionMenu("typDiv", data.types["00"]);
+
+herstellerDropDown.addEventListener('change', (event) => {
+    RemoveAllOptions(modelDropDown);
+    RemoveAllOptions(typDropDown);
+
+    const hersteller = event.target.value;
+
+    data.getModelsByHersteller(hersteller).forEach(element => {
+        AddOptionToSelect(modelDropDown, element);
+    });
+
+
+    data.getTypeByHerstellerAndModel(hersteller, modelDropDown.value).forEach(element => {
+        AddOptionToSelect(typDropDown, element);
+    });
+
+
+});
+
+modelDropDown.addEventListener('change', (event) => {
+    const hersteller = herstellerDropDown.value;
+    const model = event.target.value;
+    RemoveAllOptions(typDropDown);
+
+    data.getTypeByHerstellerAndModel(hersteller, model).forEach(element => {
+        AddOptionToSelect(typDropDown, element);
+    });
+});
+
+typDropDown.addEventListener('change', (event) => {
+    //Loading Image
+});
+
