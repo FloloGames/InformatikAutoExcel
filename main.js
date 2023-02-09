@@ -4,6 +4,46 @@ var herstellerDropDown;
 var modelDropDown;
 var typDropDown;
 
+const data = LoadData();
+
+//this is final never chancing
+herstellerDropDown = CreateSelectionMenu("herstellerDiv", data.hersteller);
+modelDropDown = CreateSelectionMenu("modelDiv", data.models[0]);
+typDropDown = CreateSelectionMenu("typDiv", data.types["00"]);
+
+herstellerDropDown.addEventListener('change', (event) => {
+    RemoveAllOptions(modelDropDown);
+    RemoveAllOptions(typDropDown);
+
+    const hersteller = event.target.value;
+
+    data.getModelsByHersteller(hersteller).forEach(element => {
+        AddOptionToSelect(modelDropDown, element);
+    });
+
+
+    data.getTypeByHerstellerAndModel(hersteller, modelDropDown.value).forEach(element => {
+        AddOptionToSelect(typDropDown, element);
+    });
+
+
+});
+
+modelDropDown.addEventListener('change', (event) => {
+    const hersteller = herstellerDropDown.value;
+    const model = event.target.value;
+    RemoveAllOptions(typDropDown);
+
+    data.getTypeByHerstellerAndModel(hersteller, model).forEach(element => {
+        AddOptionToSelect(typDropDown, element);
+    });
+});
+
+typDropDown.addEventListener('change', (event) => {
+    //Loading Image
+});
+
+
 function LoadData() {
     var data = readStringFromFilePath("erklaerung.txt").split(' ').join('').split("\r").join("");
     // console.log(text);
@@ -109,45 +149,4 @@ function RemoveAllOptions(dropdownMenu) {
         dropdownMenu.remove(i);
     }
 }
-
-//Main Part
-
-const data = LoadData();
-
-//this is final never chancing
-herstellerDropDown = CreateSelectionMenu("herstellerDiv", data.hersteller);
-modelDropDown = CreateSelectionMenu("modelDiv", data.models[0]);
-typDropDown = CreateSelectionMenu("typDiv", data.types["00"]);
-
-herstellerDropDown.addEventListener('change', (event) => {
-    RemoveAllOptions(modelDropDown);
-    RemoveAllOptions(typDropDown);
-
-    const hersteller = event.target.value;
-
-    data.getModelsByHersteller(hersteller).forEach(element => {
-        AddOptionToSelect(modelDropDown, element);
-    });
-
-
-    data.getTypeByHerstellerAndModel(hersteller, modelDropDown.value).forEach(element => {
-        AddOptionToSelect(typDropDown, element);
-    });
-
-
-});
-
-modelDropDown.addEventListener('change', (event) => {
-    const hersteller = herstellerDropDown.value;
-    const model = event.target.value;
-    RemoveAllOptions(typDropDown);
-
-    data.getTypeByHerstellerAndModel(hersteller, model).forEach(element => {
-        AddOptionToSelect(typDropDown, element);
-    });
-});
-
-typDropDown.addEventListener('change', (event) => {
-    //Loading Image
-});
 
