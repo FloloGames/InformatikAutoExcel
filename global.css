@@ -25,7 +25,7 @@ body {
 .content {
     display: flex;
     flex-direction: column;
-    gap: 20vh;
+    gap: 10vh;
 }
 
 .image {
@@ -69,4 +69,50 @@ select {
 
 }
 
+
+img {
+    width: 20vw;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    transition: all 1s;
+}
+
+img:hover {
+    transform: scale(110%);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 ::selection { background: #4e6324; color: #fff; }
+
+
+@media only screen and (max-width: 960px) {
+
+    .full {
+        width: auto;
+    }
+
+    .responsive {
+        display: none;
+    }
+
+    .footer {
+        justify-content: center;
+        width: auto;
+    }
+
+    .dropDown {
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    img {
+        width: 50vw;
+    }
+
+    .center {
+        padding-top: 5vh;
+    }
+
+}
