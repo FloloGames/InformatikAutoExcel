@@ -142,17 +142,23 @@
         "BMW": [
             {
                 "image": "./images/audi/A1.webp",
-                "name": "BMWPenis",
+                "name": "1er",
                 "types": [
-                    "Penis1",
-                    "Roblox2"
+                    "BMW1er",
+                    "BMW 1er M Automobil"
                 ]
             },
             {
                 "image": "./images/audi/A3.webp",
-                "name": "BMWasdasd",
+                "name": "X",
                 "types": [
-                    "BMW"
+                    "BMW XM",
+                    "BMW X7",
+                    "BMW X7 M Automobil",
+                    "BMW X6",
+                    "BMW X60i xDrive",
+                    "BMW X5",
+                    "BMW X3"
                 ]
             }
         ]
