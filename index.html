@@ -8,7 +8,7 @@
   <title>Auto Excel</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="style/global.css">
 </head>
 
 <body>
@@ -34,28 +34,40 @@
 
         <!--- https://codepen.io/alvarotrigo/pen/XWeLOqE ---->
         
-        <div class="info">
-          <label>
-            <input type="radio" name="info" value="test" checked>
-            <img class="icon" src="https://via.placeholder.com/40x60/0000FF/fff&text=A" alt="Option 1">
-          </label>
-
-          <label>
-            <input type="radio" name="info" value="test1">
-            <img class="icon" src="https://via.placeholder.com/40x60/8800ff /fff&text=B" alt="Option 2">
-          </label>
+        <div class="info_box">
+          <div class="info">
+            <label class="labelInfo">
+              <input type="radio" name="info" value="test" class="active" checked>
+              <img class="icon" src="https://via.placeholder.com/40x60/0000FF/fff&text=A" alt="Option 1">
+            </label>
+  
+            <label class="labelInfo">
+              <input type="radio" name="info" value="test1">
+              <img class="icon" src="https://via.placeholder.com/40x60/8800ff /fff&text=B" alt="Option 2">
+            </label>
+            
+            <label class="labelInfo">
+              <input type="radio" name="info" value="test2">
+              <img class="icon" src="https://via.placeholder.com/40x60/008000/fff&text=C" alt="Option 3">
+            </label>
+  
+            <label class="labelInfo">
+              <input type="radio" name="info" value="test3">
+              <img class="icon" src="https://via.placeholder.com/40x60/ffd700/fff&text=D" alt="Option 4">
+            </label>
+  
+            <label class="labelInfo">
+              <input type="radio" name="info" value="test4">
+              <img class="icon" src="https://via.placeholder.com/40x60/f82c00/fff&text=E" alt="Option 5">
+            </label>  
+          </div>
           
-          <label>
-            <input type="radio" name="info" value="test1">
-            <img class="icon" src="https://via.placeholder.com/40x60/008000/fff&text=C" alt="Option 2">
-          </label>
-
-          <label>
-            <input type="radio" name="info" value="test1">
-            <img class="icon" src="https://via.placeholder.com/40x60/ffd700/fff&text=D" alt="Option 2">
-          </label>
+          <div class="selection__box"></div>
         </div>
 
+        
+
+        
 
         <div class="image hover">
           <img src="" id="img" alt="car">
@@ -72,7 +84,8 @@
   </div>
 
 
-  <script src="main.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/style.js"></script>
 </body>
 
 </html>
