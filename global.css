@@ -11,7 +11,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 20vh;
+    padding-top: 3%;
     gap: 15vh;
 }
 
@@ -26,6 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10vh;
+    align-items: center;
 }
 
 .image {
@@ -75,14 +76,54 @@ img {
     border: none;
     border-radius: 10px;
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.hover {
     transition: all 1s;
 }
 
-img:hover {
+.hover:hover {
     transform: scale(110%);
     opacity: 0.8;
     cursor: pointer;
 }
+
+.info {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  width: 15vw;
+  border: none;
+  border-radius: 20px;
+  height: 4vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+  border-radius: 100px;
+}
+
+
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  outline: 2px solid #f00;
+}
+
 
 ::selection { background: #4e6324; color: #fff; }
 
