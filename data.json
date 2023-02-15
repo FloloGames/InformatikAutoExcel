@@ -2,8 +2,12 @@
     "hersteller": {
         "AUDI": [
             {
-                "image": "./images/audi/A1.webp",
                 "name": "Audi_A1",
+                "price": 500,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/A1.webp",
                 "types": [
                     "AudiA1",
                     "AudiA1Sportback",
@@ -12,8 +16,12 @@
                 ]
             },
             {
-                "image": "./images/audi/A3.webp",
                 "name": "Audi_A3",
+                "price": 200000,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/A3.webp",
                 "types": [
                     "A3",
                     "A3",
@@ -29,8 +37,12 @@
                 ]
             },
             {
-                "image": "./images/audi/A4.webp",
                 "name": "Audi_A4",
+                "price": 200000,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/A4.webp",
                 "types": [
                     "A4 Limousine",
                     "A4 Avant",
@@ -41,8 +53,12 @@
                 ]
             },
             {
-                "image": "./images/audi/A5.webp",
                 "name": "Audi_A5",
+                "price": 200000,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/A5.webp",
                 "types": [
                     "A5 Coupé",
                     "A5 Sportback",
@@ -55,8 +71,12 @@
                 ]
             },
             {
-                "image": "./images/audi/A6.webp",
                 "name": "Audi_A6",
+                "price": 200000,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/A6.webp",
                 "types": [
                     "A6 Limousine",
                     "A6 Avant",
@@ -67,8 +87,12 @@
                 ]
             },
             {
-                "image": "./images/audi/A7.webp",
                 "name": "Audi_A7",
+                "price": 200000,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/A7.webp",
                 "types": [
                     "A7 Sportback",
                     "S7 Sportback",
@@ -76,8 +100,12 @@
                 ]
             },
             {
-                "image": "./images/audi/A8.webp",
                 "name": "Audi_A8",
+                "price": 200000,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/A8.webp",
                 "types": [
                     "A8",
                     "A8 L",
@@ -86,31 +114,47 @@
                 ]
             },
             {
-                "image": "./images/audi/Q3.webp",
                 "name": "Audi_Q3",
+                "price": 200000,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/Q3.webp",
                 "types": [
                     "Q3",
                     "RS Q3"
                 ]
             },
             {
-                "image": "./images/audi/Q5.webp",
                 "name": "Audi_Q5",
+                "price": 200000,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/Q5.webp",
                 "types": [
                     "Q5",
                     "SQ5 TDI"
                 ]
             },
             {
-                "image": "./images/audi/Q7.webp",
                 "name": "Audi_Q7",
+                "price": 200000,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/Q7.webp",
                 "types": [
                     "Q7"
                 ]
             },
             {
-                "image": "./images/audi/TT.webp",
                 "name": "Audi_TT",
+                "price": 200000,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/TT.webp",
                 "types": [
                     "TT Coupe",
                     "TT Roadster",
@@ -119,16 +163,24 @@
                 ]
             },
             {
-                "image": "./images/audi/R8.webp",
                 "name": "Audi_R8",
+                "price": 200000,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/R8.webp",
                 "types": [
                     "R8 Spyder",
                     "R8 LMS ultra"
                 ]
             },
             {
-                "image": "./images/audi/RS.webp",
                 "name": "Audi_RS",
+                "price": 200000,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/RS.webp",
                 "types": [
                     "RS 4 Avant",
                     "RS 5 Coupé",
@@ -141,16 +193,24 @@
         ],
         "BMW": [
             {
-                "image": "./images/audi/A1.webp",
                 "name": "1er",
+                "price": 200000,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/A1.webp",
                 "types": [
                     "BMW1er",
                     "BMW 1er M Automobil"
                 ]
             },
             {
-                "image": "./images/audi/A3.webp",
                 "name": "X",
+                "price": 200000,
+                "rate": 200,
+                "combi": "",
+                "co2": 202,
+                "image": "./images/audi/A3.webp",
                 "types": [
                     "BMW XM",
                     "BMW X7",

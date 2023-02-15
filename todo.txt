@@ -1,0 +1,5 @@
+TODO:
+    - Daten berichigen (nicht alle gesetzt)
+
+DONE:
+    - Daten laden funktioniert
