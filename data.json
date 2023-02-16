@@ -3,8 +3,8 @@
         "AUDI": [
             {
                 "name": "Audi_A1",
-                "price": 500,
-                "rate": 200,
+                "price": "500 Euro",
+                "rate": "200 Euro",
                 "combi": "5,8-3,4 l/100 km",
                 "co2": "134-89 g/km",
                 "image": "./images/audi/A1.webp",
@@ -17,10 +17,10 @@
             },
             {
                 "name": "Audi_A3",
-                "price": 200000,
-                "rate": 200,
-                "combi": "",
-                "co2": 202,
+                "price": "555 Euro",
+                "rate": "230 Euro",
+                "combi": "5,8-3,4 l/100 km",
+                "co2": "134-89 g/km",
                 "image": "./images/audi/A3.webp",
                 "types": [
                     "A3",
@@ -38,10 +38,10 @@
             },
             {
                 "name": "Audi_A4",
-                "price": 200000,
-                "rate": 200,
-                "combi": "",
-                "co2": 202,
+                "price": "355 Euro",
+                "rate": "260 Euro",
+                "combi": "5,8-3,4 l/100 km",
+                "co2": "134-89 g/km",
                 "image": "./images/audi/A4.webp",
                 "types": [
                     "A4 Limousine",
@@ -54,10 +54,10 @@
             },
             {
                 "name": "Audi_A5",
-                "price": 200000,
-                "rate": 200,
-                "combi": "",
-                "co2": 202,
+                "price": "600 Euro",
+                "rate": "250 Euro",
+                "combi": "5,8-3,4 l/100 km",
+                "co2": "134-89 g/km",
                 "image": "./images/audi/A5.webp",
                 "types": [
                     "A5 Coupé",
@@ -72,10 +72,10 @@
             },
             {
                 "name": "Audi_A6",
-                "price": 200000,
-                "rate": 200,
-                "combi": "",
-                "co2": 202,
+                "price": "555 Euro",
+                "rate": "230 Euro",
+                "combi": "5,8-3,4 l/100 km",
+                "co2": "134-89 g/km",
                 "image": "./images/audi/A6.webp",
                 "types": [
                     "A6 Limousine",

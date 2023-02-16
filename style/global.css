@@ -75,7 +75,6 @@ select {
 img {
     width: 20vw;
     border: none;
-    border-radius: 10px;
 }
 
 .hover {
@@ -102,7 +101,7 @@ img {
     background: white;
     width: 15vw;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     align-items: center;
     position: relative;
 }
@@ -110,7 +109,6 @@ img {
 .icon {
   height: 25px;
   width: 25px;
-  border-radius: 100px;
 }
 
 .selection__box {
@@ -120,7 +118,7 @@ img {
     width: 3vw;
     position: absolute;
     background-color: #434c48;
-    border-radius: 20px;
+    border-radius: 5px;
     transition: all .3s ease-in-out;
 }
 
@@ -148,6 +146,7 @@ img {
     margin-left: 50vw;
     opacity: 0;
     transition: all 0.5s ease-in-out;
+    text-align: center;
 }
 
 .flex {
