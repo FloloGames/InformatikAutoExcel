@@ -1,5 +1,7 @@
 TODO:
     - Daten berichigen (nicht alle gesetzt)
+    - weiße Box an Text anpassen
 
 DONE:
     - Daten laden funktioniert
+    - in html eingestellt was was bedeutet (combi, co2, rate)

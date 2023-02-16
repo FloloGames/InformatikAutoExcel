@@ -5,8 +5,8 @@
                 "name": "Audi_A1",
                 "price": 500,
                 "rate": 200,
-                "combi": "",
-                "co2": 202,
+                "combi": "5,8-3,4 l/100 km",
+                "co2": "134-89 g/km",
                 "image": "./images/audi/A1.webp",
                 "types": [
                     "AudiA1",
